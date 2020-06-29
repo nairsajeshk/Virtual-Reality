@@ -1,0 +1,21 @@
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ChangeColor : MonoBehaviour
+{
+    public void Yellow()
+    {
+        GetComponent<MeshRenderer>().material.color = Color.yellow;
+    }
+    public void Red()
+    {
+        GetComponent<MeshRenderer>().material.color = Color.red;
+    }
+    public void Green()
+    {
+        GetComponent<MeshRenderer>().material.color = Color.green;
+    }
+}
+
