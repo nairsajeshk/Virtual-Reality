@@ -1,0 +1,28 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+using UnityEngine;
+using UnityEngine.UI;
+using JetBrains.Annotations;
+
+public class ChangeScene : MonoBehaviour
+{
+    private string pass1 = "123";
+    private string pass2 = "456";
+    public GameObject inputField;
+    public GameObject nameField;
+    public void SceneLoader(int sceneIndex)
+    {
+        string s = inputField.GetComponent<Text>().text;
+        string n = nameField.GetComponent<Text>().text;
+        if (s == pass1 && n == "StudentID")
+        {
+            SceneManager.LoadScene(sceneIndex);
+        }
+        else if (s == pass2 && n == "MasterID")
+        {
+            SceneManager.LoadScene(sceneIndex);
+        }
+    }
+}
+
